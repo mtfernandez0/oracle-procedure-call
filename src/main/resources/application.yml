@@ -1,0 +1,23 @@
+server:
+    port: 8080
+spring:
+    application:
+        name: jdbc-demo
+
+    datasource:
+        url: jdbc:oracle:thin:@//localhost:1521/oracle_db_test
+        username: DEMO_SCHEMA
+        password: demo_schema
+    jpa:
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.OracleDialect
+        show-sql: true
+        hibernate:
+            ddl-auto: validate
+logging:
+    level:
+      org:
+        springframework:
+          jdbc:
+            core: DEBUG
